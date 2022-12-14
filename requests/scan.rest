@@ -1,0 +1,8 @@
+POST http://localhost:3001/till/scan
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM5ZGUzMTVhLTQxYTgtNDM0OC05MGU2LWVmMmJmZmFhNDE4MiIsInVzZXJuYW1lIjoiQWxpY2UiLCJwYXNzd29yZCI6IiQyYiQxMCR0bXg4Lnpad21NMVJ2RjhPQlN3akt1MEJab2w3aWZ3LmJleTNFc0FCYlA1VndWWUpMcC5HLiIsInJvbGUiOiJhZG1pbiIsImNyZWF0ZWRfYXQiOiIyMDIyLTEyLTE0VDA4OjQyOjMxLjczOVoiLCJ1cGRhdGVkX2F0IjoiMjAyMi0xMi0xNFQwODo0MjozMS43MzlaIiwiaWF0IjoxNjcxMDEwMDk2fQ.2mAgS2ItEONsm2DWmsjwl8hyherz86pXtXwq4y0AFyA
+
+{
+    "name": "Orange",
+    "price": "22"
+}

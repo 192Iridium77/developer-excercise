@@ -1,0 +1,49 @@
+{
+  "name": "developer-excercise",
+  "version": "1.0.0",
+  "description": "This exercise is designed to demonstrate a candidate's abilities across a range of competencies in software development (The applicant can pick any language of their preference)",
+  "main": "index.js",
+  "scripts": {
+    "ui": "",
+    "api": "nodemon src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/192Iridium77/developer-excercise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/192Iridium77/developer-excercise/issues"
+  },
+  "homepage": "https://github.com/192Iridium77/developer-excercise#readme",
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/express": "^4.17.15",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.11.15",
+    "@types/uuid": "^9.0.0",
+    "dotenv": "^16.0.3",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.4",
+    "uuid": "^9.0.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/node": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^2.3.0",
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20",
+    "pg": "^8.8.0"
+  }
+}
