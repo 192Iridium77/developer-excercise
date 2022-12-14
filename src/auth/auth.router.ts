@@ -42,4 +42,4 @@ router.get("/", authenticateToken, function (req, res, next) {
   res.json({ status: 200 });
 });
 
-module.exports = router;
+export default router;

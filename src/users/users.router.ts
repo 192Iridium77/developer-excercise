@@ -1,5 +1,6 @@
 var express = require("express");
 var router = express.Router();
+import { omit } from "lodash";
 import { authenticateToken } from "../authMiddleware";
 import db from "../db";
 
@@ -14,7 +15,7 @@ router.get("/", authenticateToken, async function (req, res, next) {
 
   const users = await db.select().from("users");
 
-  return res.status(200).json(users);
+  return res.status(200).json(omit(users, "password"));
 });
 
-module.exports = router;
+export default router;

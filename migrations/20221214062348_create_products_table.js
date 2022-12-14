@@ -5,9 +5,9 @@ const uuid = require("uuid");
  * @returns { Promise<void> }
  */
 exports.up = async function (knex) {
-  await knex.schema.createTable("produce", function (table) {
+  await knex.schema.createTable("products", function (table) {
     table.uuid("id", { primaryKey: true });
-    table.string("name");
+    table.string("name").unique();
     table.integer("price");
     table.timestamps();
   });
@@ -33,7 +33,7 @@ exports.up = async function (knex) {
     price: 26,
   };
 
-  await knex.batchInsert("produce", [apple, banana, tomato, potato], 30);
+  await knex.batchInsert("products", [apple, banana, tomato, potato], 30);
 };
 
 /**
@@ -41,5 +41,5 @@ exports.up = async function (knex) {
  * @returns { Promise<void> }
  */
 exports.down = async function (knex) {
-  await knex.schema.dropTable("produce");
+  await knex.schema.dropTable("products");
 };
