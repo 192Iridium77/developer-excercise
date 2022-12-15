@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "/till/scan",
+			"name": "/orders",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -27,13 +27,121 @@
 					}
 				},
 				"url": {
-					"raw": "{{API_URL}}/till/scan",
+					"raw": "{{API_URL}}/orders",
 					"host": [
 						"{{API_URL}}"
 					],
 					"path": [
-						"till",
-						"scan"
+						"orders"
+					]
+				},
+				"description": "asdf"
+			},
+			"response": []
+		},
+		{
+			"name": "/orders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{AUTH_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/orders",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"orders"
+					]
+				},
+				"description": "asdf"
+			},
+			"response": []
+		},
+		{
+			"name": "/orders/:id/products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{AUTH_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/orders/{{ORDER_ID}}/products",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"orders",
+						"{{ORDER_ID}}",
+						"products"
+					]
+				},
+				"description": "asdf"
+			},
+			"response": []
+		},
+		{
+			"name": "/orders/:id/process",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{AUTH_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/orders/{{ORDER_ID}}/process",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"orders",
+						"{{ORDER_ID}}",
+						"process"
 					]
 				},
 				"description": "asdf"
@@ -91,7 +199,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"tomato\",\n    \"price\": 2\n}",
+					"raw": "{\n    \"name\": \"ginger\",\n    \"price\": 20\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -163,7 +271,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"items\": [\"apple\", \"banana\", \"apple\"]\n}",
+					"raw": "{\n    \"items\": [\"apple\", \"banana\"]\n}",
 					"options": {
 						"raw": {
 							"language": "json"

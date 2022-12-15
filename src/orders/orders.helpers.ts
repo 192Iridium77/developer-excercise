@@ -66,43 +66,22 @@ const calculateSecondForHalfDeduction = (
   productIds: string[]
 ) => {
   const specialProductId = productIds.length && productIds[0];
-  console.log(
-    "🚀 ~ file: orders.helpers.ts ~ line 69 ~ specialProductId",
-    specialProductId
-  );
 
   if (!specialProductId) return 0;
 
-  console.log(
-    "🚀 ~ file: orders.helpers.ts ~ line 77 ~ specialProduct ~ remainingProducts",
-    remainingProducts
-  );
   const specialProduct = remainingProducts.find((prod) => {
     return prod.productId === specialProductId;
   });
-  console.log(
-    "🚀 ~ file: orders.helpers.ts ~ line 76 ~ specialProduct ~ specialProduct",
-    specialProduct
-  );
 
   if (!specialProduct) return 0;
 
   const specialProducts = remainingProducts.filter((remainingProd) => {
     return remainingProd.productId === specialProduct.productId;
   });
-  console.log(
-    "🚀 ~ file: orders.helpers.ts ~ line 83 ~ specialProducts ~ specialProducts",
-    specialProducts
-  );
 
   const productPairsCount = Math.floor(specialProducts.length / 2);
-  console.log(
-    "🚀 ~ file: orders.helpers.ts ~ line 86 ~ productPairsCount",
-    productPairsCount
-  );
 
   const deduction = (productPairsCount * specialProduct.productPrice) / 2;
-  console.log("🚀 ~ file: orders.helpers.ts ~ line 89 ~ deduction", deduction);
 
   return deduction;
 };

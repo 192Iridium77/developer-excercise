@@ -69,7 +69,6 @@ router.post(
     if (loggedInUser.role !== "admin") return res.sendStatus(403);
 
     const products = await db("products").select();
-    console.log("🚀 ~ file: specials.router.ts ~ line 72 ~ products", products);
 
     const { valid, invalid } = validateItemsAndTransform([item], products);
 
