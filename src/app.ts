@@ -8,7 +8,7 @@ import {
   authRouter,
   usersRouter,
   productsRouter,
-  tillRouter,
+  ordersRouter,
   specialsRouter,
 } from "./routes";
 
@@ -24,7 +24,7 @@ app.use(cookieParser());
 app.use("/", authRouter);
 app.use("/users", usersRouter);
 app.use("/products", productsRouter);
-app.use("/till", tillRouter);
+app.use("/orders", ordersRouter);
 app.use("/specials", specialsRouter);
 
 // catch 404 and forward to error handler

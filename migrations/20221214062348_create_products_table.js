@@ -8,7 +8,7 @@ exports.up = async function (knex) {
   await knex.schema.createTable("products", function (table) {
     table.uuid("id", { primaryKey: true });
     table.string("name").unique();
-    table.integer("price");
+    table.integer("price").notNullable();
     table.timestamps();
   });
 

@@ -1,5 +1,3 @@
-const uuid = require("uuid");
-
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }

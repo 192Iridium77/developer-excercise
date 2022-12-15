@@ -4,7 +4,7 @@ const uuid = require("uuid");
 
 import { authenticateToken } from "../authMiddleware";
 import db from "../db";
-import { validateItemsAndTransform } from "../till/till.helpers";
+import { validateItemsAndTransform } from "../orders/orders.helpers";
 
 router.get("/", authenticateToken, async function (req, res, next) {
   const specials = await db.select().from("specials");
