@@ -1,3 +1,15 @@
+# How to Run
+
+1. run docker-compose to set up local postgresql
+2. install knex globally
+3. npm ci
+4. run knex migrate:latest
+5. set up postman
+6. create a postman environment to store API_URL="http://localhost:3001" AUTH_TOKEN, ORDER_ID
+7. import postman collection GroceryApp found in the root of this repo
+8. login with either Alice (admin) or Chris (customer) using passwords found in migrations
+9. Try out the endpoints
+
 # Developer Exercise
 
 This exercise is designed to demonstrate a candidate's abilities across a range of competencies in software development (The applicant can pick any language of their preference)
